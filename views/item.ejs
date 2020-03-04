@@ -22,7 +22,12 @@
 						<h2><%= item.itemName %></h2>
 						<h3><%= item.catalogCategory %></h3>
 						<p><%= item.description %></p>
-						<a class="btn button" href="/mychocolate">Save It</a>
+						<form method="get" action="/mychocolate/saveupdate">
+							<input hidden name="itemCode" value="<%= item.itemCode %>">
+							<input hidden name="userRating" value=5>
+							<input hidden name="madeIt" value=false>
+							<button class="btn button">Save It</button>
+						</form>
 					</div>
 				</section>
 			</main>

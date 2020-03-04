@@ -1,0 +1,94 @@
+@charset "UTF-8";
+header,footer,main,nav,section,article,aside{
+	display: block;
+}
+html,body,header,footer,main,nav,section,article,aside,ul,li,img,h1,form,button{
+	padding: 0;
+	margin: 0;
+}
+body{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.logo{
+	float: left;
+	width: 50px;
+	height: 50px;
+
+}
+.title{
+	text-align: center;
+	color: #811D08;
+	font-family: Comic Sans MS;
+}
+
+.navinline{
+	width: 1000px;
+	height: 20px;
+	padding: 10px;
+	margin-top: 10px;
+	background-color:#811D08 ;
+	color: #FFFFFF;
+}
+.navinline form{
+	display: inline;
+	padding: 10px;
+}
+.navinline button{
+	background-color:#811D08;
+	border: none;
+	color: #FFFFFF;
+
+}
+.navlist{
+
+	width: 800px;
+	text-align: left;
+	float: left;
+}
+.placeholder{
+	float: right;
+	width: 100px;
+	text-align: right;
+	font-size: 15px;
+	}
+ul{
+	list-style-type: none;
+}
+.navside {
+	width: 150px;
+	height:550px;
+	margin:10px;
+	text-align: right;
+	color: #811D08;
+	float: left;
+}
+.navside a{
+	color: #811D08;
+}
+.navside li{
+	padding: 5px;
+
+}
+main {
+  float: right;
+	width: 800px;
+	margin-top: 10px;
+}
+main form{
+  display: grid;
+}
+main label{
+  float: left;
+}
+
+footer{
+	position: fixed;
+   	bottom: 0;
+	width: 1000px;
+	background-color:#811D08 ;
+   	color: white;
+   	text-align: center;
+
+ }

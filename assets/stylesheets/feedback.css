@@ -1,32 +1,22 @@
+form{
+	display: grid;
+}
+label,select{
+	width:100px;
+}
 .section__img{
 	float: left;
 	width: 150px;
 	height: 150px;
 	margin-right: 20px;
 }
-.button__rate{
-	position: relative;
 
-}
-.section__rating{
-	width: 150px;
-	height: 30px;
-}
-.main__section h1{
+.main__div {
 	margin-top: 40px;
 
 }
-.main__div {
-	margin-top: 80px;
-
+.form__button-update{
+	width: 100px;
+	margin-top:10px
 }
-.form__button{
-	float: left;
-	margin-right: 10px;
-}
-
-span{
-	color:blue;
-}
-
 

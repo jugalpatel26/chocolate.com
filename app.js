@@ -3,10 +3,16 @@ var app = express();
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
 app.use('/node_modules', express.static('node_modules'));
-let catalogController = require('./controller/catalogController');
+var session = require('express-session');
+var catalogController = require('./controller/catalogController');
 
+app.use(session({
+  secret : 'jugal',
+  resave : false,
+  saveUninitialized : true
+}))
+app.use('/',catalogController);
 
-app.use('/', catalogController);
 
 
 app.listen(8080);

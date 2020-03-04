@@ -1,12 +1,18 @@
+
 <nav class="navbar navbar-dark navbar-expand-sm">
 	<div class="container">
+		<ul class="nav mr-auto">
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
         </button>
-		<ul class="nav mr-auto">
-				<li class="nav-item"><a class="nav-link" href="#">Login</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Signin</a></li>
-				<li class="nav-item"><a class="nav-link" href="/mychocolate">My Profile</a></li>
+		<% if(userprofile === null){ %>
+				<li class="nav-item"><a class="nav-link" href="/mychocolate">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href="/signIn">Signin</a></li>
+		<% } else { %>
+				<li class="nav-item"><a class="nav-link" href="#">Welcome!</a></li>
+				<li class="nav-item"><a class="nav-link" href="/signOut">SignOut</a></li>
+		<% } %>
+			<li class="nav-item"><a class="nav-link" href="/mychocolate">My Profile</a></li>
 		</ul>
 	</div>
 </nav>
