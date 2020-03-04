@@ -14,24 +14,28 @@
 <% include partials/header.ejs %>
 <% include partials/user-navigation.ejs %>
 <% include partials/site-navigation.ejs %>
-		<div class="col-12 col-md-9">
-			<main>
-				<section class="media">
-					<img class="mr-5 mt-2"src='<%= item.imageURL %>' height="100" width="100" alt="Jugal">
-					<div class="media-body">
-						<h2><%= item.itemName %></h2>
-						<h3><%= item.catalogCategory %></h3>
-						<p><%= item.description %></p>
-						<form method="get" action="/mychocolate/feedback">
-							<input hidden name="itemCode" value="<%= item.itemCode %>">
-							<button class="btn button">Save It</button>
-						</form>
-					</div>
+<div class="col-12 col-md-9">
+			<main class="container mt-3">
+				<section class="row align-items-center">
+	
+					<% items.forEach((item)=>{ %>
+						<div class="col-12 col-sm-4 mt-2">
+							<div class="card">
+								<img class="card-img-top" src='<%= item.imageURL %>' alt='<%= item.itemName %>' height="200">
+								<div class="card-body">
+									<h4 class="card-title"><%= item.catalogCategory %></h4>
+									<p class="card-text"><b>Recipe Name-</b><%= item.itemName %></p>
+									<a class="btn button" href="/categories/item/<%= item.itemCode %>">Details</a>
+								</div>
+							</div>
+						</div>
+					<% }) %>
 				</section>
 			</main>
 		</div>
 	</div>
-</div>
+</div>	
+
 <% include partials/footer.ejs %>
 </body>
 </html>

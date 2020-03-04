@@ -1,0 +1,10 @@
+form{
+	display: grid;
+  width:250px;
+}
+label{
+  margin:10px;
+}
+input{
+  margin:10px;
+}

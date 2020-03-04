@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
-  <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
-  <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
-  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+	<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+	<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 <body>
 <% include partials/header.ejs %>
@@ -30,12 +30,12 @@
 				  		</thead>
 				  		<tbody>
 								<%
-										for(var j=0; j< userprofile.userItems.length; j++){ %>
+										for(var j=0; j< data.userProfile.userItems.length; j++){ %>
 				    		<tr>
-				      			<td><%= userprofile.userItems[j].item.itemName %></td>
-				      			<td><%= userprofile.userItems[j].item.catalogCategory %></td>
-										<td><%= userprofile.userItems[j].userRating %></td>
-										<% if(userprofile.userItems[j].madeIt == "true" ) { %>
+				      			<td><%= data.userProfile.userItems[j].item.itemName %></td>
+				      			<td><%= data.userProfile.userItems[j].item.catalogCategory %></td>
+										<td><%= data.userProfile.userItems[j].userRating %></td>
+										<% if(data.userProfile.userItems[j].madeIt == true ) { %>
 										<td>Yes</td>
 										<% } else { %>
 											<td>No</td>
@@ -44,7 +44,7 @@
 
 				      				<form method="get">
 
-												<input hidden name="itemCode" value="<%= userprofile.userItems[j].item.itemCode %>">
+												<input hidden name="itemCode" value="<%= data.userProfile.userItems[j].item.itemCode %>">
 												<button class="btn button" type="submit" formaction="/mychocolate/feedback">Update</button>
 												<button class="btn button" type="submit" formaction="/mychocolate/delete">Delete</button>
 									</form>
@@ -55,9 +55,41 @@
 				    	</tbody>
 					</table>
 				</div>
-			<p>click <a href="/here">here</a> to share a new recipe!</p>
+				<h2>My Chocolate Recipes</h2>
+				<div class="table-responsive mt-3">
+					<table class="table table-bordered">
+						<thead>
+				    		<tr>
+				      			<th>Name</th>
+				      			<th>Brand</th>
+										<th>My Ratings</th>
+										<th>Made it!</th>
+				      			<th>Action</th>
+				    		</tr>
+				  		</thead>
+				  		<tbody>
+								<%
+									for(var j=0; j< ownersItems.length; j++){ %>
+				    		<tr>
+				      			<td><%= ownersItems[j].itemName %></td>
+				      			<td><%= ownersItems[j].catalogCategory %></td>
+								<td><%= ownersItems[j].rating %></td>
+								<td>
+
+				      				<form method="get">
+
+												<input hidden name="itemCode" value="<%= userprofile.userItems[j].item.itemCode %>">
+												<button class="btn button" type="submit" formaction="/mychocolate/delete">Delete</button>
+									</form>
+				      			</td>
+				    		</tr>
+								<%	}
+							 		%>
+				    	</tbody>
+					</table>
+				</div>
 			</main>
-        </div>
+		</div>
 	</div>
 </div>
 <% include partials/footer.ejs %>

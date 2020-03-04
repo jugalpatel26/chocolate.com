@@ -1,20 +1,11 @@
-form{
-	margin:10px;
+main h2{
+	padding-top: 5px;
 }
-
-.section__img{
-	float: left;
-	width: 150px;
-	height: 150px;
-	margin-right: 20px;
+main ul{
+	padding: 10px;
+	margin: 10px;
+	margin-left: 20px;
 }
-.button__rate{
-	position: relative;
-
+main ul li{
+	padding: 5px;
 }
-.form__button{
-	float: left;
-	margin-right: 10px;
-}
-
-

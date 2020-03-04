@@ -5,11 +5,10 @@
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
         </button>
-		<% if(userprofile === null){ %>
-				<li class="nav-item"><a class="nav-link" href="/mychocolate">Login</a></li>
-				<li class="nav-item"><a class="nav-link" href="/signIn">Signin</a></li>
+		<% if(typeof data === 'undefined'){ %>
+				<li class="nav-item"><a class="nav-link" href="/signIn">Login</a></li>
+				<li class="nav-item"><a class="nav-link" href="/signup">Signin</a></li>
 		<% } else { %>
-				<li class="nav-item"><a class="nav-link" href="#">Welcome!</a></li>
 				<li class="nav-item"><a class="nav-link" href="/signOut">SignOut</a></li>
 		<% } %>
 			<li class="nav-item"><a class="nav-link" href="/mychocolate">My Profile</a></li>

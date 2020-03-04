@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="../assets/stylesheets/main.css">
+</head>
+<body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<main>
+  <h3>Error</h3>
+	<% if(typeof error !== undefined){ %>
+		<p><%= error %></p>
+	<% } %>
+</main>
+<% include partials/footer.ejs %>
+</body>
+</html>

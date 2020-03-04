@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+	<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+	<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="col-12 col-md-9 mr-auto">
+			<main>
+				<% if(typeof error != 'undefined'){ %>
+					<h4><%= error %></h4>
+				<% } %>
+				<form class="mt-5" method="post" action="/newrecipe">
+                    <div class="form-group row">
+                        <label for="itemname" class="col-md-2 col-form-label">Item Name</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="itemname" name="itemname" placeholder="Item Name">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="itemtype" class="col-md-2 col-form-label">Item Type</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="itemtype" name="itemtype" placeholder="Item Type">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="recipe" class="col-md-2 col-form-label">Recipe</label>
+                        <div class="col-md-10">
+                            <textarea class="form-control" id="recipe" name="recipe" rows="12"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="imageurl" class="col-md-2 col-form-label">Image URL</label>
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" id="imageurl" name="imageurl" placeholder="Image URL">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+              			<button type="submit" class="btn button ml-3">Post</button>
+            		</div>
+                </form>
+			</main>
+		</div>
+	</div>
+</div>
+<% include partials/footer.ejs %>
+</body>
+</html>

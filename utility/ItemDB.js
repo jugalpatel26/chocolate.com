@@ -25,7 +25,7 @@ module.exports.getItems = function () {
 module.exports.getItem = function (itemCode) {
 
     for (var i = 0; i < data.length; i++) {
-      
+
         if (data[i].itemCode === itemCode) {
             let item = new Item(data[i].itemCode,
                 data[i].itemName,
