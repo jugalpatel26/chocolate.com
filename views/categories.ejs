@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+	<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+	<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="col-12 col-md-9">
+			<main class="container mt-3">
+				<section class="row align-item-center">
+	
+					<% itemData.forEach((item)=>{ %>
+						<div class="col-12 col-sm-4 mt-2">
+							<div class="card">
+								<img class="card-img-top" src='<%= item.imageURL %>' alt="MARS">
+								<div class="card-body">
+									<h4 class="card-title"><%= item.catalogCategory %></h4>
+									<p class="card-text"><b>Recipe Name-</b><%= item.itemName %></p>
+									<a class="btn button" href="/categories/item/<%= item.itemCode %>">Details</a>
+								</div>
+							</div>
+						</div>
+					<% }) %>
+				</section>
+			</main>
+		</div>
+	</div>
+</div>	
+
+<% include partials/footer.ejs %>
+</body>
+</html>

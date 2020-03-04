@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+	<link rel="stylesheet" type="text/css" href="/assets/stylesheets/feedback.css">
+	<script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+	<script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="col-12 col-md-9">
+		<h1>FeedBack</h1>
+			<main class="row">
+				<section class="media col-12">
+					<img class="mr-5 mt-2"src='../assets/images/Ma0M&M.jpg' height="100" width="100" alt="Jugal">
+					<div class="media-body">
+						<h2>M&M</h2>
+						<h3>MARS</h3>
+						<p>M&M® is a candy drop filled with delicious milk chocolate and covered with brightly colored candy coating.</p>
+					</div>
+				</section>
+				<form class="row ml-3">
+					<label class="col-12 col-sm-auto col-form-label">Ratings</label>
+					<select class="col-12 col-sm-auto form-control" name="userRating">
+		          		<option value=1>1</option>
+		  				<option value=2>2</option>
+		  				<option value=3>3</option>
+		  				<option value=4>4</option>
+		  				<option value=5>5</option>
+					</select>
+				</form>
+			</main>
+		</div>
+	</div>
+</div>
+
+
+<% include partials/footer.ejs %>
+</body>
+</html>

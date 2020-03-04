@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/main.css">
+  <script src="/node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<% include partials/header.ejs %>
+<% include partials/user-navigation.ejs %>
+<% include partials/site-navigation.ejs %>
+<div class="col-12 col-md-9 mr-auto mt-3">
+      <main>
+        <h2>My chocolates</h2>
+        <div class="table-responsive mt-3">
+          <table class="table table-bordered" >
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>m&m</td>
+                    <td>Mars</td>
+                    <td>
+                      <a class="btn button" href="/feedback">Update</a>
+                      <a class="btn button" href="#">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Almond Kisses</td>
+                    <td>Hershey's</td>
+                    <td>
+                      <a class="btn button" href="/feedback">Update</a>
+                      <a class="btn button" href="#">Delete</a>
+                    </td>
+                </tr>
+              </tbody>  
+          </table>
+        </div>
+        <p>click <a href="#">here</a> to share a new recipe!</p>
+      </main>
+    </div>
+  </div>
+</div>
+<% include partials/footer.ejs %>
+</body>
+</html>
