@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+.navbar-dark,footer,.button {
+	background: #3F0202;
+	color:#DA9293
+}
+h1{
+	color:#3F0202;
+}
+a{
+	color:#DA9293;
+}
+
+ul {
+  list-style-type: none;
+ }

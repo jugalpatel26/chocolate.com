@@ -1,0 +1,15 @@
+
+main table{
+	padding: 10px;
+	margin: 10px;
+	border: solid;
+}
+th,tr,td{
+	text-align: center;
+	padding: 10px;
+	border: solid;
+}
+
+
+
+
