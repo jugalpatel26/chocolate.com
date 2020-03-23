@@ -62,8 +62,6 @@
 				    		<tr>
 				      			<th>Name</th>
 				      			<th>Brand</th>
-										<th>My Ratings</th>
-										<th>Made it!</th>
 				      			<th>Action</th>
 				    		</tr>
 				  		</thead>
@@ -73,12 +71,11 @@
 				    		<tr>
 				      			<td><%= ownersItems[j].itemName %></td>
 				      			<td><%= ownersItems[j].catalogCategory %></td>
-								<td><%= ownersItems[j].rating %></td>
 								<td>
 
 				      				<form method="get">
 
-												<input hidden name="itemCode" value="<%= userprofile.userItems[j].item.itemCode %>">
+												<input hidden name="itemCode" value="<%= ownersItems[j].itemCode %>">
 												<button class="btn button" type="submit" formaction="/mychocolate/delete">Delete</button>
 									</form>
 				      			</td>
