@@ -339,7 +339,7 @@ function createArrayItemModel(itemData){
 }
 
 function createUserModel(userData){
-  return new User(userData._id,userData.firstName,userData.lastName,userData.email,userData.salt,userData.password)
+  return new User(userData[0]._id,userData[0].firstName,userData[0].lastName,userData[0].email,userData[0].salt,userData[0].password)
 }
 
 function createUserProfileModel(userId,userItems){
