@@ -42,7 +42,7 @@
 										<% } %>
 				      			<td>
 
-				      				<form method="get">
+				      				<form method="post">
 
 												<input hidden name="itemCode" value="<%= data.userProfile.userItems[j].item.itemCode %>">
 												<button class="btn button" type="submit" formaction="/mychocolate/feedback">Update</button>
@@ -73,7 +73,7 @@
 				      			<td><%= ownersItems[j].catalogCategory %></td>
 								<td>
 
-				      				<form method="get">
+				      				<form method="post">
 
 												<input hidden name="itemCode" value="<%= ownersItems[j].itemCode %>">
 												<button class="btn button" type="submit" formaction="/owneritem/delete">Delete</button>

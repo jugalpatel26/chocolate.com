@@ -22,7 +22,7 @@
 						<h2><%= item.itemName %></h2>
 						<h3><%= item.catalogCategory %></h3>
 						<p><%= item.description %></p>
-						<form method="get" action="/mychocolate/feedback">
+						<form method="post" action="/mychocolate/feedback">
 							<input hidden name="itemCode" value="<%= item.itemCode %>">
 							<button class="btn button">Save It</button>
 						</form>

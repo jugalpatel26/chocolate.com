@@ -42,7 +42,6 @@ module.exports.saveUser = async function(user){
 }
 
 module.exports.saveItem = async function(item){
-	console.log(item.imageURL);
 	this.item = new Item(
 		{
 			itemName:item.itemName,

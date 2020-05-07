@@ -1,11 +1,19 @@
-var express = require('express');
-var app = express();
+
+const express = require('express');
+const app = express();
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+
+const catalog = require('./routes/catalog');
+const signUp = require('./controller/signUp');
+
+
 app.set('view engine', 'ejs');
+
 app.use('/assets', express.static('assets'));
 app.use('/node_modules', express.static('node_modules'));
-var session = require('express-session');
-var catalogController = require('./controller/catalogController');
-var mongoose = require('mongoose');
+app.use(bodyParser.urlencoded({ extended: false }))
 
 mongoose.connect('mongodb://localhost/chocolate', {useNewUrlParser: true});
 
@@ -22,7 +30,7 @@ mongoose.connection.on('connected', function () {
     resave : false,
     saveUninitialized : true
   }))
-  app.use('/',catalogController);
+  app.use('/',catalog);
 });
 
 app.listen(8080,()=>{

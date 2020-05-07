@@ -17,7 +17,9 @@
 <div class="col-12 col-md-9 mr-auto">
 			<main>
 				<% if(typeof error != 'undefined'){ %>
-					<h4><%= error %></h4>
+					<% error.forEach((d)=>{ %>
+						<h4 class="text-danger"><%= d.msg %></h4>
+					<% }) %>
 				<% } %>
 				<form class="mt-5" method="post" action="/newrecipe">
                     <div class="form-group row">
@@ -41,7 +43,7 @@
                     <div class="form-group row">
                         <label for="imageurl" class="col-md-2 col-form-label">Image URL</label>
                         <div class="col-md-10">
-                            <input type="text" class="form-control" id="imageurl" name="imageurl" placeholder="Image URL">
+                            <input type="url" class="form-control" id="imageurl" name="imageurl" placeholder="Image URL">
                         </div>
                     </div>
                     <div class="form-group row">
